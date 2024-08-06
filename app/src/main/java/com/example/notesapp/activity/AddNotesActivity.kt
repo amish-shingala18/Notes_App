@@ -1,8 +1,10 @@
 package com.example.notesapp.activity
 
+import android.annotation.SuppressLint
+import android.graphics.Rect
 import android.os.Bundle
-import android.webkit.WebSettings.RenderPriority
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.notesapp.R
@@ -24,6 +26,7 @@ class AddNotesActivity : AppCompatActivity() {
             insets
         }
         initClick()
+        keyboardDetector()
     }
     private fun initClick(){
         getDataIntent()
@@ -49,6 +52,7 @@ class AddNotesActivity : AppCompatActivity() {
             }
         }
     }
+    @SuppressLint("SimpleDateFormat")
     private fun saveOrUpdateClick(priority: Int) {
         val edtTitle = binding.edtTitle.text.toString()
         val edtNote = binding.edtNote.text.toString()
@@ -74,5 +78,23 @@ class AddNotesActivity : AppCompatActivity() {
         intentIds = intent.getIntExtra("id", -1)
         binding.edtTitle.setText(intentTitle)
         binding.edtNote.setText(intentDescription)
+    }
+    private fun keyboardDetector(){
+        binding.main.viewTreeObserver.addOnGlobalLayoutListener {
+            val rect = Rect()
+            binding.main.getWindowVisibleDisplayFrame(rect)
+            val screenHeight = binding.main.rootView.height
+            val keypadHeight = screenHeight - rect.bottom
+
+            if (keypadHeight > screenHeight * 0.15) {
+                val view = binding.llPriority.layoutParams as ConstraintLayout.LayoutParams
+                view.bottomMargin = keypadHeight
+                binding.llPriority.layoutParams = view
+            } else {
+                val view = binding.llPriority.layoutParams as ConstraintLayout.LayoutParams
+                view.bottomMargin = 0
+                binding.llPriority.layoutParams = view
+            }
+        }
     }
 }
