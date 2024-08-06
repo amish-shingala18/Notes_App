@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/click1"
+        android:icon="@drawable/baseline_add_24"
+        android:title="hello" />
+
+
+    <item
+        android:id="@+id/click2"
+        android:icon="@drawable/baseline_arrow_back_ios_24"
+        android:title="hello2" />
+
+</menu>

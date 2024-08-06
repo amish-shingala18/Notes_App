@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="all_notes">All Notes</string>
+    <string name="title_activity_add_note">AddNoteActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="description">The Android platform includes an operating system based upon the Linux kernel,
+        a GUI, a web browser and end-user applications that can be downloaded.
+        Although the initial demonstrations of Android featured a generic QWERTY smartphone and large VGA screen,
+        the operating system was written to run on relatively inexpensive handsets with conventional numeric keypads.The Android platform includes an operating system based upon the Linux kernel,
+        a GUI, a web browser and end-user applications that can be downloaded.
+        Although the initial demonstrations of Android featured a generic QWERTY smartphone and large VGA screen,
+        the operating system was written to run on relatively inexpensive handsets with conventional numeric keypads.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
