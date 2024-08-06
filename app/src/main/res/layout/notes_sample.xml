@@ -21,14 +21,14 @@
         <TextView
             android:id="@+id/txtSampleDescription"
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="240dp"
             android:padding="10dp"
             android:text="@string/description" />
 
         <LinearLayout
             android:id="@+id/lnrPriority"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="10dp"
             android:layout_gravity="bottom"
             android:background="@color/green" />
 
@@ -75,7 +75,7 @@
         android:layout_height="25dp"
         android:visibility="gone"
         style="@style/iconTheme"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/txtSampleDate"
         app:layout_constraintStart_toStartOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="@+id/txtSampleTitle"
